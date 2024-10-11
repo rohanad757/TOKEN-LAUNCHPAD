@@ -1,0 +1,137 @@
+/* Global Styles */
+body {
+  background-color: #0d0d0d; /* Dark background for the whole window */
+  font-family: 'Roboto', sans-serif;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  min-height: 100vh; /* Use the full viewport height */
+  overflow: hidden; /* Prevent scrolling */
+}
+
+h1 {
+  color: #00d3ff;
+  text-shadow: 0 0 15px rgba(0, 211, 255, 0.5);
+  margin: 20px 0; /* Spacing above and below */
+}
+
+/* Form Container Styles */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Spacing between input fields */
+  width: 90%; /* Use a percentage width */
+  max-width: 600px; /* Limit max width for larger screens */
+  padding: 0 20px; /* Padding on the sides */
+}
+
+.inputText,
+.select-wallet {
+  background: #1a1a1a;
+  border: none; /* No border */
+  color: #00d3ff;
+  padding: 12px;
+  border-radius: 8px;
+  width: 100%; /* Full width */
+  font-size: 1rem;
+  box-shadow: inset 0px 0px 10px rgba(0, 211, 255, 0.3);
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.inputText:focus,
+.select-wallet:focus {
+  box-shadow: inset 0px 0px 15px rgba(255, 64, 129, 0.5); /* Highlight on focus */
+}
+
+.btn {
+  background: linear-gradient(135deg, #00d3ff, #ff4081);
+  border: none; /* No border */
+  color: #fff;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  margin-top: 20px; /* Margin above button */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #ff4081, #00d3ff);
+  transform: translateY(-2px);
+  box-shadow: 0px 8px 20px rgba(255, 64, 129, 0.5);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+::placeholder {
+  color: #8a8a8a;
+  opacity: 0.7;
+  font-size: 0.95rem;
+}
+
+/* Styles for PC */
+@media (min-width: 769px) {
+  h1 {
+      font-size: 3rem; /* Larger font size for PC */
+  }
+
+  .form-group {
+      width: 60%; /* Center the form on larger screens */
+      padding: 20px; /* More padding on PC */
+  }
+
+  .inputText,
+  .select-wallet {
+      font-size: 1rem; /* Regular font size for inputs */
+      padding: 12px; /* Normal padding for inputs */
+  }
+
+  .btn {
+      font-size: 1.2rem; /* Larger button font size */
+      padding: 16px; /* More padding for button */
+  }
+}
+
+/* Styles for Mobile */
+@media (max-width: 768px) {
+  h1 {
+      font-size: 2rem; /* Smaller font size for mobile */
+      margin-bottom: 10px; /* Reduce margin */
+  }
+
+  .form-group {
+      width: 95%; /* Wider on mobile */
+      padding: 0 10px; /* Reduce side padding on mobile */
+  }
+
+  .inputText,
+  .select-wallet {
+      font-size: 0.9rem; /* Smaller font size for inputs */
+      padding: 10px; /* Reduced padding for inputs */
+  }
+
+  .btn {
+      font-size: 1rem; /* Smaller button font size */
+      padding: 12px; /* Reduced padding for button */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+      font-size: 1.5rem; /* Even smaller font size for very small screens */
+  }
+
+  .form-group {
+      gap: 10px; /* Reduced spacing between elements */
+      padding: 0 5px; /* Minimal side padding */
+  }
+}
